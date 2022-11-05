@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.Modify_Product_Controller">
+   <children>
+      <AnchorPane prefHeight="668.0" prefWidth="1030.0" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#1f93ff00" height="631.0" layoutX="12.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="1002.0" />
+      <Label fx:id="productTitleLabel" layoutX="67.0" layoutY="58.0" prefHeight="17.0" prefWidth="163.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="120.0" prefHeight="17.0" prefWidth="51.0" text="ID" />
+      <TextField fx:id="productIDField" disable="true" editable="false" layoutX="156.0" layoutY="116.0" prefWidth="120.0" />
+      <Label layoutX="90.0" layoutY="155.0" text="Name" />
+      <TextField fx:id="productNameField" layoutX="156.0" layoutY="151.0" prefWidth="120.0" />
+      <Label layoutX="90.0" layoutY="190.0" text="Inv" />
+      <TextField fx:id="productInvField" layoutX="156.0" layoutY="186.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="90.0" layoutY="225.0" text="Price" />
+      <TextField fx:id="productPriceField" layoutX="156.0" layoutY="221.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="90.0" layoutY="260.0" text="Max" />
+      <TextField fx:id="productMaxField" layoutX="156.0" layoutY="256.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="310.0" layoutY="260.0" text="Min" />
+      <TextField fx:id="productMinField" layoutX="355.0" layoutY="256.0" prefWidth="120.0" />
+      <TableView fx:id="productPartTableview" layoutX="554.0" layoutY="90.0" prefHeight="200.0" prefWidth="422.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Product ID" visible="false" />
+          <TableColumn prefWidth="120.0" text="Product Name" visible="false" />
+            <TableColumn prefWidth="111.0" text="Inventory Level" visible="false" />
+            <TableColumn prefWidth="114.0" text="Price/Cost per Unit" visible="false" />
+        </columns>
+      </TableView>
+      <TableView fx:id="assocPartTableview" layoutX="554.0" layoutY="353.0" prefHeight="200.0" prefWidth="422.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Part ID" visible="false" />
+            <TableColumn prefWidth="112.0" text="Part Name" visible="false" />
+            <TableColumn prefWidth="110.0" text="Inventory Level" visible="false" />
+            <TableColumn prefWidth="124.0" text="Price/Cost per Unit" visible="false" />
+         </columns>
+      </TableView>
+      <TextField fx:id="modProductSearchField" layoutX="802.0" layoutY="46.0" prefHeight="25.0" prefWidth="174.0" promptText="Search by Product ID or Name" />
+      <Button fx:id="productAddButton" layoutX="920.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleProductAddButton" text="Add" />
+      <Button fx:id="removeAssociatedPartButton" graphicTextGap="2.0" layoutX="813.0" layoutY="568.0" mnemonicParsing="false" onAction="#handleRemoveAssociatedPartButton" prefHeight="25.0" prefWidth="144.0" text="Remove Associated Part" />
+      <Button fx:id="productSaveButton" layoutX="813.0" layoutY="601.0" mnemonicParsing="false" onAction="#handleProductSaveButton" text="Save" />
+      <Button fx:id="productCancelButton" layoutX="905.0" layoutY="601.0" mnemonicParsing="false" onAction="#handleProductCancelButton" text="Cancel" />
+   </children>
+</Pane>
